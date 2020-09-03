@@ -7,6 +7,7 @@ public class login {
 	@Given("^Open URL$")
 	public void open_URL() throws Throwable {
 		// Write code here that turns the phrase above into concrete actions
+		System.out.println("Demo Test");
 	}
 
 	@When("^insert valid credentials$")
