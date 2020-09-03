@@ -19,7 +19,7 @@ public class login {
 	public void check_result() throws Throwable {
 		System.out.println("Demo Test");	 
 		//adding in master
-
+		//adding from dev-satyampatel
 	}
 
 }
