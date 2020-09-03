@@ -17,7 +17,7 @@ public class login {
 
 	@Then("^check result$")
 	public void check_result() throws Throwable {
-		// Write code here that turns the phrase above into concrete actions
+		System.out.println("Demo Test");	 
 
 	}
 
