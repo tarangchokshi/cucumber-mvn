@@ -28,7 +28,7 @@
 			<version>4.12</version>
 			<scope>test</scope>
 		</dependency>
-	
+
 		<dependency>
 			<groupId>info.cukes</groupId>
 			<artifactId>cucumber-java</artifactId>
@@ -46,7 +46,41 @@
 			<version>1.2.5</version>
 			<scope>test</scope>
 		</dependency>
-	
+		<dependency>
+			<groupId>net.masterthought</groupId>
+			<artifactId>cucumber-reporting</artifactId>
+			<version>3.8.0</version>
+		</dependency>
+
 
 	</dependencies>
+
+	<build>
+
+
+		<plugins>
+			<plugin>
+				<groupId>net.masterthought</groupId>
+				<artifactId>maven-cucumber-reporting</artifactId>
+				<version>3.8.0</version>
+				<executions>
+					<execution>
+						<id>execution</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+						<configuration>
+							<projectName>MyProjectName</projectName>  <!-- Replace with project name -->
+							<outputDirectory>target/cucumber-reports/advanced-reports</outputDirectory>
+							<cucumberOutput>target/cucumber-reports/CucumberTestReport.json</cucumberOutput>
+							<buildNumber>1</buildNumber>
+							<parallelTesting>false</parallelTesting>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+		</plugins>
+	</build>
 </project>
