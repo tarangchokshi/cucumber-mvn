@@ -12,7 +12,7 @@ public class login {
 
 	@When("^insert valid credentials$")
 	public void insert_valid_credentials() throws Throwable {
-		System.out.println("Demo Test");	}
+		System.out.println("Demo Test");	 }
 
 	@Then("^check result$")
 	public void check_result() throws Throwable {
