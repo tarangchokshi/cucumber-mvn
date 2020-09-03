@@ -1,3 +1,5 @@
 target/
 *.prefs
 *.MF
+/.classpath
+/target
