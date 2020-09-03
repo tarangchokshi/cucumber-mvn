@@ -18,6 +18,7 @@ public class login {
 	@Then("^check result$")
 	public void check_result() throws Throwable {
 		System.out.println("Demo Test");	 
+		//adding in master
 
 	}
 
