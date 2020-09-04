@@ -28,6 +28,7 @@ public class login extends Base {
 
 	@Then("^homepage should display$")
 	public void homepage_should_display() throws Throwable {
+		// validate login functionality
 
 	}
 
