@@ -3,3 +3,5 @@ target/
 *.MF
 /.classpath
 /target
+bin/
+/bin
