@@ -1,11 +1,6 @@
 Feature: Test login functionality
-@multiple
-Scenario Outline: Check valid login functionality
+Scenario: Check valid login functionality
 
 Given Open URL
-When user logged in using username as "<username>" and password as "<password>"
+When user logged in using username and password
 Then homepage should display
-
-Examples:
-|username|password|
-|admin|admin123	|
