@@ -16,8 +16,5 @@ import cucumber.api.junit.Cucumber;
 
 public class testrunner {
 
-	public testrunner() {
-		// TODO Auto-generated constructor stub
-	}
 
 }
