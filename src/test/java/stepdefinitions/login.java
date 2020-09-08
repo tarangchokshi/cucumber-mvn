@@ -5,16 +5,16 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import cucumber.api.java.Before;
 import cucumber.api.java.en.*;
 
 public class login {
 
 	WebDriver driver;
 
-	@Before
+	@BeforeClass
 	public void setUp() {
 		System.setProperty("webdriver.chrome.driver", "src\\main\\resources\\ChromeDriver\\chromedriver.exe");
 		driver = new ChromeDriver();
@@ -26,6 +26,8 @@ public class login {
 	public void open_URL() throws Throwable {
 
 	System.out.println("test1......");
+	driver.get("https://orangehrm-demo-6x.orangehrmlive.com/");
+
 	}
 
 	@When("^user logged in using username and password$")
