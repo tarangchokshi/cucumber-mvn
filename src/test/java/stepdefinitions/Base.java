@@ -3,6 +3,7 @@ package stepdefinitions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -15,9 +16,12 @@ public class Base {
 
 	public WebDriver setupBrowser() {
 		System.setProperty("webdriver.chrome.driver", "src\\main\\resources\\ChromeDriver\\chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("headless");
+		options.addArguments("disable-gpu");
+		driver = new ChromeDriver(options);
 		driver.manage().window().maximize();
-
+		
 		wait = new WebDriverWait(driver, 100);
 		wait = new WebDriverWait(driver, WebDriverWaitTimeout);
 

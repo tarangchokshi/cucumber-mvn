@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="51473" started-at="2020-09-09T19:22:37Z" finished-at="2020-09-09T19:23:29Z">
+  <suite name="Suite" duration-ms="20124" started-at="2020-09-09T19:42:08Z" finished-at="2020-09-09T19:42:28Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="51473" started-at="2020-09-09T19:22:37Z" finished-at="2020-09-09T19:23:29Z">
+    <test name="Test" duration-ms="20124" started-at="2020-09-09T19:42:08Z" finished-at="2020-09-09T19:42:28Z">
       <class name="stepdefinitions.login">
-        <test-method status="PASS" signature="InitializeBrowser()[pri:0, instance:stepdefinitions.login@402f32ff]" name="InitializeBrowser" is-config="true" duration-ms="7781" started-at="2020-09-09T19:22:29Z" finished-at="2020-09-09T19:22:37Z">
+        <test-method status="PASS" signature="InitializeBrowser()[pri:0, instance:stepdefinitions.login@402f32ff]" name="InitializeBrowser" is-config="true" duration-ms="6702" started-at="2020-09-09T19:42:01Z" finished-at="2020-09-09T19:42:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- InitializeBrowser -->
-        <test-method status="PASS" signature="Login()[pri:0, instance:stepdefinitions.login@402f32ff]" name="Login" duration-ms="51402" started-at="2020-09-09T19:22:37Z" finished-at="2020-09-09T19:23:29Z">
+        <test-method status="PASS" signature="Login()[pri:0, instance:stepdefinitions.login@402f32ff]" name="Login" duration-ms="20027" started-at="2020-09-09T19:42:08Z" finished-at="2020-09-09T19:42:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method status="PASS" signature="closure()[pri:0, instance:stepdefinitions.login@402f32ff]" name="closure" is-config="true" duration-ms="251" started-at="2020-09-09T19:23:29Z" finished-at="2020-09-09T19:23:29Z">
+        <test-method status="PASS" signature="closure()[pri:0, instance:stepdefinitions.login@402f32ff]" name="closure" is-config="true" duration-ms="273" started-at="2020-09-09T19:42:28Z" finished-at="2020-09-09T19:42:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closure -->
