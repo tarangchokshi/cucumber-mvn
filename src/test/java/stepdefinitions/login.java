@@ -1,42 +1,42 @@
 package stepdefinitions;
 
-import java.util.concurrent.TimeUnit;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.BeforeClass;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.Test;
 
-import cucumber.api.java.en.*;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
 
-public class login {
+public class login extends Base {
 
 	WebDriver driver;
 
-	@BeforeClass
-	public void setUp() {
-		System.setProperty("webdriver.chrome.driver", "src\\main\\resources\\ChromeDriver\\chromedriver.exe");
-		driver = new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-	}
-
-	@Test @Given("^Open URL$")
+	@Test
+	@Given("^Open URL$")
 	public void open_URL() throws Throwable {
 
-	System.out.println("test1......");
-	driver.get("https://orangehrm-demo-6x.orangehrmlive.com/");
+		driver = setupBrowser();
+
+		System.out.println("Open URL......");
+//		driver.get("https://orangehrm-demo-6x.orangehrmlive.com/");
 
 	}
 
+	@Test
 	@When("^user logged in using username and password$")
 	public void user_logged_in_using_username_and_password() throws Throwable {
-		System.out.println("test2......");
+		System.out.println("user logged in using username and password......");
 	}
 
+	@Test
 	@Then("^homepage should display$")
 	public void homepage_should_display() throws Throwable {
-		System.out.println("test3......");
+		System.out.println("homepage should display......");
+	}
+
+	@AfterSuite 
+	public void TestClosure(){
+		driver.close();
 	}
 }
