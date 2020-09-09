@@ -1,42 +1,39 @@
 package stepdefinitions;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
-
-import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
 
 public class login extends Base {
 
 	WebDriver driver;
 
-	@Test
-	@Given("^Open URL$")
-	public void open_URL() throws Throwable {
-
+	@BeforeSuite
+	public void InitializeBrowser() {
 		driver = setupBrowser();
-
-		System.out.println("Open URL......");
-//		driver.get("https://orangehrm-demo-6x.orangehrmlive.com/");
-
 	}
 
 	@Test
-	@When("^user logged in using username and password$")
-	public void user_logged_in_using_username_and_password() throws Throwable {
-		System.out.println("user logged in using username and password......");
+	public void Login() throws Throwable {
+		driver.get("https://orangehrm-demo-6x.orangehrmlive.com/");
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//*[@id='txtUsername']")).clear();
+		driver.findElement(By.xpath("//*[@id='txtUsername']")).sendKeys(username);
+		Thread.sleep(1000);
+		driver.findElement(By.xpath("//*[@id='txtPassword']")).clear();
+		driver.findElement(By.xpath("//*[@id='txtPassword']")).sendKeys(password);
+		driver.findElement(By.xpath("//*[@id='btnLogin']")).click();
+
+		System.out.println("verify now");
+		Thread.sleep(3000);
+
+		VerifyLogin();
 	}
 
-	@Test
-	@Then("^homepage should display$")
-	public void homepage_should_display() throws Throwable {
-		System.out.println("homepage should display......");
-	}
-
-	@AfterSuite 
-	public void TestClosure(){
+	@AfterSuite
+	public void closure() {
 		driver.close();
 	}
 }

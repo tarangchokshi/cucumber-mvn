@@ -10,6 +10,10 @@
 	<name>automation</name>
 	<url>http://maven.apache.org</url>
 
+	<properties> <suiteXmlFile>src/main/resources/TestEnvironment.xml</suiteXmlFile> 
+		<suiteXmlFile>testng.xml</suiteXmlFile> <skiptest>false</skiptest> </properties>
+
+
 	<dependencies>
 
 		<dependency>
