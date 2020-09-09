@@ -6,6 +6,5 @@ public class NewTest {
   @Test
   public void runparallel() {
 	  System.out.println("check parallel");
-	  
   }
 }
