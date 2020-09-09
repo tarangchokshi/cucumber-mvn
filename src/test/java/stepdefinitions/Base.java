@@ -17,7 +17,7 @@ public class Base {
 	public WebDriver setupBrowser() {
 		System.setProperty("webdriver.chrome.driver", "src\\main\\resources\\ChromeDriver\\chromedriver.exe");
 		ChromeOptions options = new ChromeOptions();
-		options.addArguments("headless");
+//		options.addArguments("headless");
 		options.addArguments("disable-gpu");
 		driver = new ChromeDriver(options);
 		driver.manage().window().maximize();
