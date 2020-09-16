@@ -35,9 +35,9 @@ public class Base {
 
 	@BeforeSuite
 	public void before() throws Throwable {
-		htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir") + "\\ExtentReports\\Automation_Report_" + dateFormat.format(new Date()) + ".html");
+//		htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir") + "\\ExtentReports\\Automation_Report_" + dateFormat.format(new Date()) + ".html");
 
-//		htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir") + "\\ExtentReports\\AutomationReport.html");
+		htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir") + "\\ExtentReports\\AutomationReport.html");
 		extent = new ExtentReports();
 		extent.attachReporter(htmlReporter);
 
