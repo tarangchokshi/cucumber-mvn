@@ -6,6 +6,8 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.Status;
+
 public class login extends Base {
 
 	WebDriver driver;
@@ -17,6 +19,10 @@ public class login extends Base {
 
 	@Test
 	public void Login() throws Throwable {
+		
+		test = extent.createTest("Check Login Functionality");
+
+		
 		driver.get("https://orangehrm-demo-6x.orangehrmlive.com/");
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//*[@id='txtUsername']")).clear();
@@ -30,6 +36,8 @@ public class login extends Base {
 		Thread.sleep(3000);
 
 		VerifyLogin();
+		test.log(Status.PASS, "Home Page Redirection Successful");
+
 	}
 
 	@AfterSuite
